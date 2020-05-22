@@ -7,7 +7,7 @@ services:
       - 8080:80
     volumes:
       - ${PWD}/example/base.conf:/etc/nginx/nginx.conf:ro
-      - ${PWD}/example/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${PWD}/example/nginx.conf:/etc/nginx/stream.conf.d/default.conf:ro
       - ${PWD}/example/stream.js:/usr/share/nginx/html/stream.js:ro
   http2:
     image: nginx
