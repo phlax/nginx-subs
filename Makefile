@@ -3,7 +3,7 @@
 SHELL := /bin/bash
 
 
-image: deb
+image:
 	docker build -t phlax/nginx context
 
 hub-image:
