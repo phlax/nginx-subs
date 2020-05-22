@@ -5,6 +5,6 @@ language: python
 
 
 script:
-  - export COMPOSE_FILE=./example/docker-compose.yml
+  - export COMPOSE_FILE=example/docker-compose.yml
   - docker-compose up -d
   - curl http://localhost:8080
