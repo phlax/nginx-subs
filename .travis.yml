@@ -1,0 +1,18 @@
+# https://travis-ci.org/#!/phlax/docker-cloud
+
+dist: bionic
+language: python
+
+install:
+  - make image
+
+script:
+  - docker images
+
+deploy:
+  provider: script
+  script: make hub-image
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(master)$
